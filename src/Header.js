@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Header = () => {
+const Header = (props) => {
 	return (
 		<header>
 			<div class='topic-div'>
@@ -9,17 +9,17 @@ const Header = () => {
 			<div class='main-header'>
 				<img src='https://i.imgur.com/dANNfLT.jpg' alt='Sally Picture' />
 				<section class='intro'>
-					<h2>Sally</h2>
+					<h2>{props.name}</h2>
 					<h3>Job intention: Front end developer</h3>
 				</section>
 				<address class='contact'>
 					<ul>
 						<li>
-							Email: <a href='mailto:sally@student.com'>Sally</a>
+							Email: <a href='mailto:sally@student.com'>{props.name}</a>
 						</li>
 						<li>Phone: 218-678-888</li>
 						<li>Address: 4739 Aaron Smith Houston, Tx 78001.</li>
-						<li>Facebook: @sally</li>
+						<li>Facebook: @{props.name}</li>
 					</ul>
 				</address>
 			</div>
